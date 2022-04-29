@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent amazon
     stages {
         stage('Build') {
             steps {
