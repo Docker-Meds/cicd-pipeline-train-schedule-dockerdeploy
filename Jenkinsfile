@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    options {
+        timestamps ()
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
     stages {
         stage('Build') {
             steps {
@@ -54,6 +59,11 @@ pipeline {
                     }
                 }
             }
+        }
+    }
+        post {
+        cleanup {
+            cleanWs()
         }
     }
 }
