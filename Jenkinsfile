@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh 'gradle -v'
-                sh './gradlew build -PtestAllSupportedGradleVersions=true'
+                sh './gradlew build --no-dameon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
