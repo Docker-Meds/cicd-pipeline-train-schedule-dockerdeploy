@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh 'gradle -v'
-                sh 'gradlew build -PtestAllSupportedGradleVersions=true'
+                sh 'gradlew build'
                 gradlew build -PtestAllSupportedGradleVersions=true
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
