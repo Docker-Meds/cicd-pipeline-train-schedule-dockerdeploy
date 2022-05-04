@@ -10,8 +10,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh 'gradle -v'
-                sh 'npm install -g npm@latest'
-                sh './gradlew build --no-daemon'
+                sh './gradlew build'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
