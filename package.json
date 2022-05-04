@@ -14,7 +14,7 @@
     "jade": "latest",
     "lowdb": "latest",
     "morgan": "latest",
-    "npm": "8.5.0"
+    "npm": "latest"
   },
   "devDependencies": {
     "mocha": "latest",
