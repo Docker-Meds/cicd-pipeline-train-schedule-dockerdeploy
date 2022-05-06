@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'amazon' }
+     environment {
+        DOCKER_IMAGE_NAME = "dockermeds/train-schedule"
+    }
 
     options {
         timestamps ()
